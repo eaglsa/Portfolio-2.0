@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* 👤 Individual View Theme Rules */
+.theme-individual {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+.theme-individual a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+.theme-individual a:hover {
+  color: #ffffff;
+}
+
+/* 💻 Developer View Theme Rules */
+.theme-developer {
+  background-color: #000000 !important;
+  color: #10b981 !important;
+}
+
+/* 🎨 Designer View Theme Rules */
+.theme-designer {
+  background-color: #fcfbf7 !important;
+  color: #171717 !important;
+}
+
+/* Smooth color transitions when toggling personas */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Clean custom scrollbar for the horizontal timeline */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+/* 🧵 Refined Timeline Scrollbar Engine */
+.scrollbar-thin {
+  scrollbar-width: none; /* Completely hides native scrollbar tracking on Firefox */
+  -ms-overflow-style: none; /* Hides native scrollbar on IE/Edge */
+}
+
+/* Hides native scrollbar on Chrome, Safari, and newer Opera builds */
+.scrollbar-thin::-webkit-scrollbar {
+  display: none;
+}
+
+/* Subtle accent overlay to indicate you can swipe or drag */
+.timeline-fade-edge {
+  mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+}
